@@ -38,10 +38,10 @@ class ProviderHomeCard extends StatelessWidget {
           ],
         ),
         child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: .start,
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(4),
+              borderRadius: .circular(4),
               child: Image.asset(
                 provider.image,
                 width: 90.rw(context),
@@ -54,18 +54,19 @@ class ProviderHomeCard extends StatelessWidget {
               child: SizedBox(
                 height: 89.rh(context),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: .start,
                   children: [
                     Text(
                       provider.name,
                       maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                        fontSize: 18.rf(context),
-                        fontWeight: FontWeight.w600,
-                        color: CustomColors.primaryTextColor,
-                        fontFamily: Constants.fontFamily,
-                      ),
+                      overflow: .ellipsis,
+                      style: Theme.of(context).textTheme.headlineSmall!
+                          .copyWith(
+                            fontSize: 18.rf(context),
+                            fontWeight: .w600,
+                            color: CustomColors.primaryTextColor,
+                            fontFamily: Constants.fontFamily,
+                          ),
                     ),
                     SizedBox(height: 4.rh(context)),
                     _DynamicTags(tags: provider.tags),
@@ -78,12 +79,12 @@ class ProviderHomeCard extends StatelessWidget {
             SizedBox(
               height: 89.rh(context),
               child: Align(
-                alignment: Alignment.bottomCenter,
+                alignment: .bottomCenter,
                 child: GestureDetector(
                   onTap: onBookmark,
-                  behavior: HitTestBehavior.opaque,
+                  behavior: .opaque,
                   child: Padding(
-                    padding: EdgeInsets.only(left: 4.rw(context)),
+                    padding: .only(left: 4.rw(context)),
                     child: SvgPicture.asset(
                       provider.bookmarked
                           ? MediaConstants.bookmarkFilledIcon
@@ -94,7 +95,7 @@ class ProviderHomeCard extends StatelessWidget {
                           ? null
                           : const ColorFilter.mode(
                               CustomColors.bodyTextColor,
-                              BlendMode.srcIn,
+                              .srcIn,
                             ),
                     ),
                   ),
@@ -124,13 +125,13 @@ class _DynamicTags extends StatelessWidget {
 
   Widget _dot(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 6.rw(context)),
+      padding: .symmetric(horizontal: 6.rw(context)),
       child: Container(
         width: 5,
         height: 5,
         decoration: const BoxDecoration(
           color: CustomColors.tagDot,
-          shape: BoxShape.circle,
+          shape: .circle,
         ),
       ),
     );
@@ -169,7 +170,7 @@ class _DynamicTags extends StatelessWidget {
 
     final tagStyle = TextStyle(
       fontSize: 16.rf(context),
-      fontWeight: FontWeight.w400,
+      fontWeight: .w400,
       letterSpacing: 0.5,
       height: 1.5,
       color: CustomColors.tagText,
@@ -189,7 +190,8 @@ class _DynamicTags extends StatelessWidget {
         );
         final visible = tags.take(count).toList();
         final remaining = tags.length - count;
-        final needsEllipsis = count == 1 &&
+        final needsEllipsis =
+            count == 1 &&
             remaining > 0 &&
             (_measure(visible.first, tagStyle) +
                     separator +
@@ -202,7 +204,8 @@ class _DynamicTags extends StatelessWidget {
             children: [
               for (var i = 0; i < visible.length; i++) ...[
                 if (i > 0) _dot(context),
-                if (i == visible.length - 1 && (needsEllipsis || remaining == 0))
+                if (i == visible.length - 1 &&
+                    (needsEllipsis || remaining == 0))
                   Flexible(
                     child: Text(
                       visible[i],

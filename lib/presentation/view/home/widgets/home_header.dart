@@ -39,14 +39,14 @@ class HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
       elevation: progress > 0.05 ? 3 : 0,
       shadowColor: CustomColors.black.withValues(alpha: 0.15),
       borderRadius: const BorderRadius.vertical(bottom: Radius.circular(40)),
-      clipBehavior: Clip.antiAlias,
+      clipBehavior: .antiAlias,
       child: SizedBox.expand(
         child: Stack(
           fit: StackFit.expand,
           children: [
             Positioned.fill(
               child: Align(
-                alignment: Alignment.topRight,
+                alignment: .topRight,
                 child: FractionallySizedBox(
                   alignment: Alignment.topRight,
                   widthFactor: 234.19 / 393,
@@ -56,7 +56,7 @@ class HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: topInset),
+              padding: .only(top: topInset),
               child: Column(
                 children: [
                   if (welcomeOpacity > 0)
@@ -66,7 +66,7 @@ class HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
                         height: welcomeHeight * (1 - progress),
                         child: ClipRect(
                           child: OverflowBox(
-                            alignment: Alignment.topCenter,
+                            alignment: .topCenter,
                             maxHeight: welcomeHeight,
                             child: Padding(
                               padding: EdgeInsets.fromLTRB(
@@ -115,7 +115,7 @@ class HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
                 MediaConstants.avatarUser,
                 width: 56.rw(context),
                 height: 56.rh(context),
-                fit: BoxFit.cover,
+                fit: .cover,
               ),
             ),
             SizedBox(width: 12.rw(context)),
@@ -128,7 +128,7 @@ class HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
                     style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                       color: CustomColors.white,
                       fontSize: 18.rf(context),
-                      fontWeight: FontWeight.w500,
+                      fontWeight: .w500,
                       fontFamily: Constants.fontFamily,
                     ),
                   ),
@@ -148,22 +148,22 @@ class HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
               width: 56.rw(context),
               height: 56.rw(context),
               child: Stack(
-                alignment: Alignment.center,
-                clipBehavior: Clip.none,
+                alignment: .center,
+                clipBehavior: .none,
                 children: [
                   Container(
                     width: 56.rw(context),
                     height: 56.rw(context),
                     decoration: const BoxDecoration(
                       color: CustomColors.primary,
-                      shape: BoxShape.circle,
+                      shape: .circle,
                     ),
                   ),
                   SizedBox(
                     width: 24.rw(context),
                     height: 24.rw(context),
                     child: Stack(
-                      clipBehavior: Clip.none,
+                      clipBehavior: .none,
                       children: [
                         SvgPicture.asset(
                           MediaConstants.notificationIcon,
@@ -198,7 +198,7 @@ class HomeHeaderDelegate extends SliverPersistentHeaderDelegate {
             style: Theme.of(context).textTheme.displaySmall!.copyWith(
               color: CustomColors.white,
               fontSize: 24.rf(context),
-              fontWeight: FontWeight.w600,
+              fontWeight: .w600,
               height: 1.4,
               fontFamily: Constants.fontFamily,
             ),

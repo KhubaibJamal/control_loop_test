@@ -26,10 +26,7 @@ class ServicesHomeSection extends StatelessWidget {
           children: services.take(4).map((item) {
             return ServiceCategoryItem(
               item: item,
-              onTap: () => _openCategory(
-                context,
-                item.title == 'Cleaning' ? 'Home cleaning' : item.title,
-              ),
+              onTap: () => _openCategory(context, item.title),
             );
           }).toList(),
         ),
