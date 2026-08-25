@@ -1,16 +1,42 @@
-# control_loop_test
 
-A new Flutter project.
+## Requirements
+- Flutter 3.38.7 and Dart 3.10.7
+- Flutter SDK ^3.10.7
+- Xcode 15 / Android Studio Hedgehog (for iOS/Android builds)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Steps to Run
+1. **Clone**
+   ```bash
+   git clone git@github.com:your-org/exercise-and-earn.git
+   cd exercise-and-earn
+   ```
+2. **Install Flutter packages**
+   ```bash
+   flutter pub get
+   ```
+3. **Install iOS pods (macOS only)**
+   ```bash
+   cd ios
+   pod install
+   cd ..
+   ```
+   
+4. **Run**
+   ```bash
+   flutter run
+   ```
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Development Tips
+- Use `dart format .` before submitting PRs.
+- Keep repositories free of UI concerns—push business logic into view models.
+- Add widget tests for critical flows whenever you change UX logic.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Contributing
+1. Create a topic branch off `main`.
+2. Make your changes with tests.
+3. Open a PR describing the change, screenshots for UI updates, and any env/key requirements.
+
+## License
+This project is proprietary. All rights reserved.
