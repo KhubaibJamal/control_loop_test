@@ -8,8 +8,8 @@
 ## Steps to Run
 1. **Clone**
    ```bash
-   git clone git@github.com:your-org/exercise-and-earn.git
-   cd exercise-and-earn
+   git clone https://github.com/KhubaibJamal/control_loop_test.git
+   cd control-loop-test
    ```
 2. **Install Flutter packages**
    ```bash
