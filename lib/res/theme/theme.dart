@@ -4,20 +4,24 @@ ThemeData darkTheme = ThemeData(
   iconTheme: const IconThemeData(color: CustomColors.primary),
   fontFamily: 'Poppins',
   snackBarTheme: const SnackBarThemeData(
-      backgroundColor: CustomColors.primary,
-      behavior: SnackBarBehavior.floating),
-  dialogTheme: DialogThemeData(
-    backgroundColor: CustomColors.white,
+    backgroundColor: CustomColors.primary,
+    behavior: SnackBarBehavior.floating,
   ),
+  dialogTheme: DialogThemeData(backgroundColor: CustomColors.white),
   bottomSheetTheme: const BottomSheetThemeData(
-      backgroundColor: Colors.white,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20), topRight: Radius.circular(20)))),
+    backgroundColor: Colors.white,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(20),
+        topRight: Radius.circular(20),
+      ),
+    ),
+  ),
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: CustomColors.white,
-      unselectedItemColor: CustomColors.grey,
-      selectedItemColor: CustomColors.white),
+    backgroundColor: CustomColors.white,
+    unselectedItemColor: CustomColors.grey,
+    selectedItemColor: CustomColors.white,
+  ),
   splashColor: CustomColors.white.withValues(alpha: .5),
   highlightColor: CustomColors.white.withValues(alpha: .5),
   textSelectionTheme: TextSelectionThemeData(
@@ -25,40 +29,50 @@ ThemeData darkTheme = ThemeData(
     selectionColor: CustomColors.primary,
     selectionHandleColor: CustomColors.white,
   ),
-  colorScheme: ColorScheme.fromSwatch(
-    accentColor: CustomColors.primary,
-  ),
+  colorScheme: ColorScheme.fromSwatch(accentColor: CustomColors.primary),
   checkboxTheme: CheckboxThemeData(side: BorderSide(color: CustomColors.white)),
   listTileTheme: ListTileThemeData(
-      shape: RoundedRectangleBorder(
-          side: BorderSide(color: CustomColors.grey),
-          borderRadius: BorderRadius.circular(5))),
+    shape: RoundedRectangleBorder(
+      side: BorderSide(color: CustomColors.grey),
+      borderRadius: BorderRadius.circular(5),
+    ),
+  ),
   textButtonTheme: const TextButtonThemeData(
-      style: ButtonStyle(
-          foregroundColor: WidgetStatePropertyAll(CustomColors.primary))),
+    style: ButtonStyle(
+      foregroundColor: WidgetStatePropertyAll(CustomColors.primary),
+    ),
+  ),
   dividerColor: CustomColors.grey,
   appBarTheme: AppBarTheme(
-      color: CustomColors.black,
-      elevation: 0,
-      foregroundColor: CustomColors.white),
+    color: CustomColors.black,
+    elevation: 0,
+    foregroundColor: CustomColors.white,
+  ),
   scaffoldBackgroundColor: CustomColors.black,
   primaryColor: CustomColors.primary,
   primaryColorLight: CustomColors.primary.withValues(alpha: .5),
   brightness: Brightness.light,
   hintColor: CustomColors.grey,
   switchTheme: SwitchThemeData(
-      thumbColor:
-          WidgetStateProperty.all(CustomColors.primary.withValues(alpha: .8)),
-      trackColor:
-          WidgetStateProperty.all(CustomColors.primary.withValues(alpha: .1))),
+    thumbColor: WidgetStateProperty.all(
+      CustomColors.primary.withValues(alpha: .8),
+    ),
+    trackColor: WidgetStateProperty.all(
+      CustomColors.primary.withValues(alpha: .1),
+    ),
+  ),
   elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ButtonStyle(
-          shape: WidgetStatePropertyAll(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
-          fixedSize: const WidgetStatePropertyAll<Size>(Size(999, 50)),
-          backgroundColor: const WidgetStatePropertyAll(CustomColors.primary),
-          padding: const WidgetStatePropertyAll<EdgeInsetsGeometry>(
-              EdgeInsets.symmetric(horizontal: 10, vertical: 10)))),
+    style: ButtonStyle(
+      shape: WidgetStatePropertyAll(
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+      fixedSize: const WidgetStatePropertyAll<Size>(Size(999, 50)),
+      backgroundColor: const WidgetStatePropertyAll(CustomColors.primary),
+      padding: const WidgetStatePropertyAll<EdgeInsetsGeometry>(
+        EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      ),
+    ),
+  ),
   textTheme: TextTheme(
     // Main Heading
     displayLarge: TextStyle(
@@ -173,19 +187,22 @@ ThemeData lightTheme = ThemeData(
     backgroundColor: CustomColors.primary,
     behavior: SnackBarBehavior.fixed,
   ),
-  dialogTheme: DialogThemeData(
-    backgroundColor: CustomColors.white,
-  ),
+  dialogTheme: DialogThemeData(backgroundColor: CustomColors.white),
   bottomSheetTheme: const BottomSheetThemeData(
-      dragHandleColor: Colors.grey,
-      backgroundColor: Colors.white,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20), topRight: Radius.circular(20)))),
+    dragHandleColor: Colors.grey,
+    backgroundColor: Colors.white,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(20),
+        topRight: Radius.circular(20),
+      ),
+    ),
+  ),
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: CustomColors.white,
-      unselectedItemColor: CustomColors.grey,
-      selectedItemColor: CustomColors.white),
+    backgroundColor: CustomColors.white,
+    unselectedItemColor: CustomColors.grey,
+    selectedItemColor: CustomColors.white,
+  ),
   splashColor: CustomColors.white.withValues(alpha: .5),
   highlightColor: CustomColors.white.withValues(alpha: .5),
   textSelectionTheme: TextSelectionThemeData(
@@ -198,17 +215,22 @@ ThemeData lightTheme = ThemeData(
     // primarySwatch: CustomColors.primary
   ),
   listTileTheme: ListTileThemeData(
-      shape: RoundedRectangleBorder(
-          side: BorderSide(color: CustomColors.grey),
-          borderRadius: BorderRadius.circular(5))),
+    shape: RoundedRectangleBorder(
+      side: BorderSide(color: CustomColors.grey),
+      borderRadius: BorderRadius.circular(5),
+    ),
+  ),
   dividerColor: CustomColors.grey,
   textButtonTheme: const TextButtonThemeData(
-      style: ButtonStyle(
-          foregroundColor: WidgetStatePropertyAll(CustomColors.primary))),
+    style: ButtonStyle(
+      foregroundColor: WidgetStatePropertyAll(CustomColors.primary),
+    ),
+  ),
   appBarTheme: AppBarTheme(
-      color: CustomColors.white,
-      elevation: 0,
-      foregroundColor: CustomColors.black),
+    color: CustomColors.white,
+    elevation: 0,
+    foregroundColor: CustomColors.black,
+  ),
   primaryColorLight: CustomColors.primary.withValues(alpha: .5),
   brightness: Brightness.light,
   hintColor: CustomColors.grey,
@@ -217,37 +239,36 @@ ThemeData lightTheme = ThemeData(
   //     trackColor: WidgetStateProperty.all(CustomColors.bg)),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(),
   elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ButtonStyle(
-          shape: WidgetStatePropertyAll(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
-          fixedSize: const WidgetStatePropertyAll<Size>(Size(999, 40)),
-          backgroundColor: const WidgetStatePropertyAll(CustomColors.primary),
-          padding: const WidgetStatePropertyAll<EdgeInsetsGeometry>(
-              EdgeInsets.symmetric(horizontal: 10, vertical: 10)))),
+    style: ButtonStyle(
+      shape: WidgetStatePropertyAll(
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      ),
+      fixedSize: const WidgetStatePropertyAll<Size>(Size(999, 40)),
+      backgroundColor: const WidgetStatePropertyAll(CustomColors.primary),
+      padding: const WidgetStatePropertyAll<EdgeInsetsGeometry>(
+        EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      ),
+    ),
+  ),
   textTheme: const TextTheme(
-    // Main Heading
     displayLarge: TextStyle(
       fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: CustomColors.primaryTextColor,
-      fontFamily: 'Poppins',
-    ),
-    // Sub Heading
-    displayMedium: TextStyle(
-      fontSize: 28,
       fontWeight: FontWeight.w600,
       color: CustomColors.primaryTextColor,
       fontFamily: 'Poppins',
     ),
-    // Section Heading
+    displayMedium: TextStyle(
+      fontSize: 28,
+      fontWeight: FontWeight.w500,
+      color: CustomColors.primaryTextColor,
+      fontFamily: 'Poppins',
+    ),
     displaySmall: TextStyle(
       fontSize: 24,
       fontWeight: FontWeight.w500,
       color: CustomColors.primaryTextColor,
       fontFamily: 'Poppins',
     ),
-
-    // Card Titles
     headlineLarge: TextStyle(
       fontSize: 22,
       fontWeight: FontWeight.w600,
@@ -262,21 +283,19 @@ ThemeData lightTheme = ThemeData(
     ),
     headlineSmall: TextStyle(
       fontSize: 18,
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w500,
       color: CustomColors.primaryTextColor,
       fontFamily: 'Poppins',
     ),
-
-    // Bold Titles
     titleLarge: TextStyle(
       fontSize: 16,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w600,
       color: CustomColors.primaryTextColor,
       fontFamily: 'Poppins',
     ),
     titleMedium: TextStyle(
       fontSize: 14,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w500,
       color: CustomColors.primaryTextColor,
       fontFamily: 'Poppins',
     ),
@@ -286,59 +305,69 @@ ThemeData lightTheme = ThemeData(
       color: CustomColors.primaryTextColor,
       fontFamily: 'Poppins',
     ),
-
-    // Main body text
     bodyLarge: TextStyle(
       fontSize: 16,
-      fontWeight: FontWeight.normal,
+      fontWeight: FontWeight.w400,
       color: CustomColors.primaryTextColor,
       fontFamily: 'Poppins',
     ),
     bodyMedium: TextStyle(
       fontSize: 14,
-      fontWeight: FontWeight.normal,
-      color: CustomColors.primaryTextColor,
+      fontWeight: FontWeight.w400,
+      color: CustomColors.secondaryTextColor,
       fontFamily: 'Poppins',
     ),
     bodySmall: TextStyle(
       fontSize: 12,
-      fontWeight: FontWeight.normal,
-      color: CustomColors.primaryTextColor,
+      fontWeight: FontWeight.w400,
+      color: CustomColors.bodyTextColor,
       fontFamily: 'Poppins',
     ),
-
-    // Buttons
     labelLarge: TextStyle(
       fontSize: 14,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w500,
       color: CustomColors.primaryTextColor,
       fontFamily: 'Poppins',
     ),
     labelMedium: TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.w500,
-      color: CustomColors.primaryTextColor,
+      fontSize: 13,
+      fontWeight: FontWeight.w400,
+      color: CustomColors.bodyTextColor,
       fontFamily: 'Poppins',
     ),
     labelSmall: TextStyle(
       fontSize: 10,
       fontWeight: FontWeight.w400,
-      color: CustomColors.primaryTextColor,
+      color: CustomColors.bodyTextColor,
       fontFamily: 'Poppins',
     ),
   ),
 );
 
 class CustomColors {
-  static const Color primary = Color(0xFFFCCE00);
-  static const Color primaryTextColor = Color(0xFF001921);
-  static const Color secondaryTextColor = Color(0xFF57616A);
-  static const Color bodyTextColor = Color(0xFFE4E6E8);
-  static const Color bodyGrey = Color(0xFFEFF0F1);
-  static const Color textFieldHintColor = Color(0xFF99A2AB);
-  static const Color textFieldFillColor = Color(0xFFF4F5F6);
+  static const Color primary = Color(0xFF004E42);
+  static const Color headerShape = Color(0xFF2a6251);
+  static const Color primaryTextColor = Color(0xFF1B1B1B);
+  static const Color secondaryTextColor = Color(0xFF393939);
+  static const Color bodyTextColor = Color(0xFFAAAAAA);
+  static const Color bodyGrey = Color(0xFFF1F1F1);
+  static const Color textFieldHintColor = Color(0xFFA3A3A3);
+  static const Color textFieldFillColor = Color(0xFFFFFFFF);
   static const Color navBarColor = Color(0xFFFFFFFF);
-  static const Color primaryScreenColor = Color(0xFFEFF0F2);
+  static const Color primaryScreenColor = Color(0xFFFFFFFF);
+  static const Color serviceChipBg = Color(0xFFF8F3EC);
+  static const Color statCardBg = Color(0xFFF8F3EC);
+  static const Color ratingBadgeBg = Color(0xFFF3EBDF);
+  static const Color tagDot = Color(0xFFBDBDBD);
+  static const Color tagMore = Color(0xFF8E8E8E);
+  static const Color tagText = Color(0xFF555555);
+  static const Color cardShadow = Color(0x3DB5B5B5);
+  static const Color badgeBg = Color(0xFFE5EDEC);
+  static const Color borderColor = Color(0xFFDBDBDB);
+  static const Color lightBorder = Color(0xFFE3E3E3);
+  static const Color chipInactive = Color(0xFFDDDDDD);
+  static const Color star = Color(0xFFEFC100);
+  static const Color notificationDot = Color(0xFFE20000);
   static const Color red = Color(0xFFEA4335);
   static const Color green = Color(0xFF2CBD53);
   static const Color blue = Color(0xFF4285F4);

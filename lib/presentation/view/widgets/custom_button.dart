@@ -75,15 +75,15 @@ class CustomButton extends StatelessWidget {
         },
         child: MaterialButton(
           minWidth: autoWidth == true ? null : (width ?? double.infinity),
-          height: height ?? 50.rh(context),
+          height: height ?? 40.rh(context),
           padding: padding,
           shape: RoundedRectangleBorder(
             side: border ?? BorderSide.none,
-            borderRadius: BorderRadius.circular(radius ?? 10),
+            borderRadius: BorderRadius.circular(radius ?? 8),
           ),
           elevation: (showElevation ?? true) ? 0.5 : 0,
           color: buttonColor ?? CustomColors.primary,
-          disabledColor: disabledColor ?? CustomColors.black,
+          disabledColor: disabledColor ?? CustomColors.bodyGrey,
           onPressed: (isInProgress == true || (disabled ?? false))
               ? null
               : () {
@@ -107,10 +107,10 @@ class CustomButton extends StatelessWidget {
                   style:
                       btnTextStyle ??
                       Theme.of(context).textTheme.displayLarge!.copyWith(
-                        color: textColor ?? CustomColors.primaryTextColor,
-                        fontSize: fontSize ?? context.font.larger.rf(context),
+                        color: textColor ?? CustomColors.white,
+                        fontSize: fontSize ?? context.font.normal.rf(context),
                         fontWeight: FontWeight.w600,
-                        letterSpacing: 1,
+                        letterSpacing: 0.2,
                         fontFamily: Constants.fontFamily,
                       ),
                 ),
@@ -121,10 +121,10 @@ class CustomButton extends StatelessWidget {
                     style:
                         btnTextStyle ??
                         Theme.of(context).textTheme.displayLarge!.copyWith(
-                          color: textColor ?? CustomColors.primaryTextColor,
-                          fontSize: fontSize ?? context.font.larger.rf(context),
+                          color: textColor ?? CustomColors.white,
+                          fontSize: fontSize ?? context.font.normal.rf(context),
                           fontWeight: FontWeight.w600,
-                          letterSpacing: 1,
+                          letterSpacing: 0.2,
                           fontFamily: Constants.fontFamily,
                         ),
                   ),

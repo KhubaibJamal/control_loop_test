@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:control_loop_test/res/constants/constants.dart';
 import 'package:control_loop_test/res/constants/media_constants.dart';
 import 'package:control_loop_test/res/theme/theme.dart';
 import 'package:control_loop_test/utils/responsiveSize.dart';
@@ -40,6 +41,7 @@ class CustomTextFormField extends StatefulWidget {
     this.searchSvgColor,
     this.autofillHints,
     this.prefixContainer,
+    this.borderColor,
   });
   final String? hintText;
   final TextEditingController? controller;
@@ -49,7 +51,6 @@ class CustomTextFormField extends StatefulWidget {
   final AutovalidateMode? autovalidate;
   final bool? isReadOnly;
   final List<TextInputFormatter>? formaters;
-  // final CustomTextFieldValidator? validator;
   final String? Function(String? value)? validator;
   final Color? fillColor;
   final Function(dynamic value)? onChange;
@@ -75,6 +76,7 @@ class CustomTextFormField extends StatefulWidget {
   final EdgeInsets? contentPadding;
   final Color? searchSvgColor;
   final List<String>? autofillHints;
+  final Color? borderColor;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -101,9 +103,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       style:
           widget.textStyle ??
           TextStyle(
-            fontSize: context.font.normal,
-            color: Colors.black,
-            // color: CustomColors.primaryTextColor,
+            fontSize: context.font.large,
+            color: CustomColors.primaryTextColor,
+            fontFamily: Constants.fontFamily,
           ),
       minLines: widget.minLine ?? 1,
       maxLines: widget.maxLine ?? 1,
@@ -163,15 +165,21 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         filled: true,
         fillColor: widget.fillColor ?? CustomColors.textFieldFillColor,
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide.none,
+          borderSide: widget.borderColor != null
+              ? BorderSide(color: widget.borderColor!)
+              : BorderSide.none,
           borderRadius: getBorderRadius(),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide.none,
+          borderSide: widget.borderColor != null
+              ? BorderSide(color: widget.borderColor!)
+              : BorderSide.none,
           borderRadius: getBorderRadius(),
         ),
         border: OutlineInputBorder(
-          borderSide: BorderSide.none,
+          borderSide: widget.borderColor != null
+              ? BorderSide(color: widget.borderColor!)
+              : BorderSide.none,
           borderRadius: getBorderRadius(),
         ),
       ),
@@ -189,16 +197,16 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
 
   BorderRadius getBorderRadius() {
     return widget.isLeftBorder == null && widget.isRightBorder == null
-        ? BorderRadius.circular(12)
+        ? BorderRadius.circular(8)
         : widget.isLeftBorder == true
         ? const BorderRadius.only(
-            topLeft: Radius.circular(12),
-            bottomLeft: Radius.circular(12),
+            topLeft: Radius.circular(8),
+            bottomLeft: Radius.circular(8),
           )
         : widget.isRightBorder == true
         ? const BorderRadius.only(
-            topRight: Radius.circular(12),
-            bottomRight: Radius.circular(12),
+            topRight: Radius.circular(8),
+            bottomRight: Radius.circular(8),
           )
         : BorderRadius.zero;
   }
